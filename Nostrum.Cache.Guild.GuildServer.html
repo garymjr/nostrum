@@ -1,0 +1,716 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.15.0">
+    <title>Nostrum.Cache.Guild.GuildServer – Elixir v0.2.1</title>
+    <link rel="stylesheet" href="dist/app-a07cea761b.css" />
+    
+    <script src="dist/sidebar_items-f64ec6cf9c.js"></script>
+  </head>
+  <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+
+  
+  <a href="intro.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Elixir
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.2.1
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Elixir v0.2.1</small>
+        Nostrum.Cache.Guild.GuildServer
+        
+        
+          <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/guild/guild_server.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc">
+          <p>Module for interacting with Guild Servers.</p>
+
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:search_criteria/0">search_criteria()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Represents different ways to search for a guild</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:search_criteria_with_key/0">search_criteria_with_key()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Represents different ways to get a value from a guild</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:search_criteria_with_transform/0">search_criteria_with_transform()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Represents different ways to transform a guild</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:transform/0">transform()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Transform for a guild</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#all/0">all()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Retrieves a stream of all guilds</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get/1">get(search_criteria)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Retrieves a guild from the cache</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get!/1">get!(search_criteria)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Retrieves a guild from the cache</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_value/1">get_value(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Retrieves a value from a guild in the cache</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_value!/1">get_value!(search_critera_with_key)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Retrieves a value from a guild in the cache</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_value_from_all/1">get_value_from_all(key)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Retrieves a stream of values from all guilds</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#transform/1">transform(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Retrieves a transformed guild from the cache</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#transform_all/1">transform_all(transform)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Retrieves a stream of transformed guild values from the cache</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+        </section>
+      
+
+      
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:search_criteria/0">
+  
+  <div class="detail-header">
+    <a href="#t:search_criteria/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">search_criteria()</span>
+    
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/guild/guild_server.ex#L34" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:search_criteria/0">search_criteria</a> ::
+  [{:id, integer}] |
+  [{:channel_id, integer}] |
+  [{:message, <a href="Nostrum.Struct.Message.html#t:t/0">Nostrum.Struct.Message.t</a>}]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Represents different ways to search for a guild.</p>
+<h2 id="t:search_criteria/0-examples" class="section-heading">
+  <a href="#t:search_criteria/0-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<ul>
+<li>Search by <a href="Nostrum.Struct.Guild.html#t:id/0"><code class="inline">Nostrum.Struct.Guild.id/0</code></a>
+</li>
+</ul>
+<pre><code class="Elixir">  GuildServer.get(id: 666666666666666)</code></pre>
+<ul>
+<li>Search by <code class="inline">t:Nostrum.Struct.Guild.TextChannel.id/0</code>
+</li>
+</ul>
+<pre><code class="Elixir">  GuildServer.get(channel_id: 314159265358979)</code></pre>
+<ul>
+<li>Search via <a href="Nostrum.Struct.Message.html"><code class="inline">Nostrum.Struct.Message</code></a>
+</li>
+</ul>
+<pre><code class="Elixir">  msg = Nostrum.Api.create_message!(1618033988731, &quot;Drake confirmed British&quot;)
+  GuildServer.get(msg)</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="t:search_criteria_with_key/0">
+  
+  <div class="detail-header">
+    <a href="#t:search_criteria_with_key/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">search_criteria_with_key()</span>
+    
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/guild/guild_server.ex#L44" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:search_criteria_with_key/0">search_criteria_with_key</a> ::
+  [id: integer, key: key :: atom] |
+  [channel_id: integer, key: key :: atom] |
+  [message: <a href="Nostrum.Struct.Message.html#t:t/0">Nostrum.Struct.Message.t</a>, key: key :: atom]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Represents different ways to get a value from a guild.</p>
+<p>Same as <a href="#t:search_criteria/0"><code class="inline">search_criteria/0</code></a>, but takes an additional key parameter.
+Keys can be found in <a href="Nostrum.Struct.Guild.html"><code class="inline">Nostrum.Struct.Guild</code></a></p>
+
+  </section>
+</div>
+<div class="detail" id="t:search_criteria_with_transform/0">
+  
+  <div class="detail-header">
+    <a href="#t:search_criteria_with_transform/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">search_criteria_with_transform()</span>
+    
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/guild/guild_server.ex#L61" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:search_criteria_with_transform/0">search_criteria_with_transform</a> ::
+  [id: integer, transform: <a href="#t:transform/0">transform</a>] |
+  [channel_id: integer, transform: <a href="#t:transform/0">transform</a>] |
+  [message: <a href="Nostrum.Struct.Message.html#t:t/0">Nostrum.Struct.Message.t</a>, transform: <a href="#t:transform/0">transform</a>]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Represents different ways to transform a guild.</p>
+<p>Same as <a href="#t:search_criteria/0"><code class="inline">search_criteria/0</code></a>, but takes an additional transform parameter.
+See <a href="#transform/1"><code class="inline">transform/1</code></a> for an example.</p>
+
+  </section>
+</div>
+<div class="detail" id="t:transform/0">
+  
+  <div class="detail-header">
+    <a href="#t:transform/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">transform()</span>
+    
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/guild/guild_server.ex#L53" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>transform() :: (<a href="Nostrum.Struct.Guild.html#t:t/0">Nostrum.Struct.Guild.t</a> -> term)</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Transform for a guild.</p>
+<p>The function is passed a <code class="inline">Nostrum.Struct.Guild.t</code> struct.</p>
+
+  </section>
+</div>
+
+          </div>
+        </section>
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="all/0">
+  
+  <div class="detail-header">
+    <a href="#all/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">all()</span>
+    
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/guild/guild_server.ex#L82" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>all() :: <a href="https://hexdocs.pm/elixir/Enumerable.html#t:t/0">Enumerable.t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Retrieves a stream of all guilds.</p>
+<p>This will introduce a very large binary into the caller process. Consider
+running this method inside its own task.</p>
+<p>If you just need to get a specific key, consider using
+<code class="inline">get_value_all/1</code></p>
+<h2 id="all/0-example" class="section-heading">
+  <a href="#all/0-example" class="hover-link"><i class="icon-link"></i></a>
+  Example
+</h2>
+
+<pre><code class="Elixir">Nostrum.Cache.Guild.GuildServer.all
+|&gt; Enum.take_every(3)
+|&gt; D3L3T3_GU1LD</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="get/1">
+  
+  <div class="detail-header">
+    <a href="#get/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get(search_criteria)</span>
+    
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/guild/guild_server.ex#L120" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>get(<a href="#t:search_criteria/0">search_criteria</a>) ::
+  {:error, reason :: atom} |
+  {:ok, <a href="Nostrum.Struct.Guild.html#t:t/0">Nostrum.Struct.Guild.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Retrieves a guild from the cache.</p>
+<h2 id="get/1-parameters" class="section-heading">
+  <a href="#get/1-parameters" class="hover-link"><i class="icon-link"></i></a>
+  Parameters
+</h2>
+
+<ul>
+<li><code class="inline">search_criteria</code> - The criteria used to search. See <a href="#t:search_criteria/0"><code class="inline">search_criteria/0</code></a> for more info.
+</li>
+</ul>
+<h2 id="get/1-example" class="section-heading">
+  <a href="#get/1-example" class="hover-link"><i class="icon-link"></i></a>
+  Example
+</h2>
+
+<pre><code class="Elixir">case Nostrum.Cache.Guild.GuildServer.get(id: 1234567891234789) do
+  {:ok, guild} -&gt; &quot;Guild has #{length(guild.members)} members&quot;
+  {:error, _reason} -&gt; &quot;Guild is MIA&quot;
+end</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="get!/1">
+  
+  <div class="detail-header">
+    <a href="#get!/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get!(search_criteria)</span>
+    
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/guild/guild_server.ex#L132" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>get!(<a href="#t:search_criteria/0">search_criteria</a>) :: no_return | {<a href="Nostrum.Struct.Guild.html#t:t/0">Nostrum.Struct.Guild.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Retrieves a guild from the cache.</p>
+<p>See <a href="Nostrum.Cache.Guild.GuildServer.html#get/1"><code class="inline">Nostrum.Cache.Guild.GuildServer.get/1</code></a> for usage.</p>
+<p>Raises <a href="Nostrum.Error.CacheError.html"><code class="inline">Nostrum.Error.CacheError</code></a> if unable to find the guild.</p>
+
+  </section>
+</div>
+<div class="detail" id="get_value/1">
+  
+  <div class="detail-header">
+    <a href="#get_value/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_value(list)</span>
+    
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/guild/guild_server.ex#L157" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>get_value(<a href="#t:search_criteria_with_key/0">search_criteria_with_key</a>) ::
+  {:error, reason :: atom} |
+  {:ok, term}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Retrieves a value from a guild in the cache.</p>
+<p>This method should be preferred over the <a href="#get/1"><code class="inline">get/1</code></a>
+method in the event that you need only one kv pair from the guild.</p>
+<h2 id="get_value/1-parameters" class="section-heading">
+  <a href="#get_value/1-parameters" class="hover-link"><i class="icon-link"></i></a>
+  Parameters
+</h2>
+
+<ul>
+<li><code class="inline">search_criteria_with_key</code> - The criteria used to search. See
+  <a href="#t:search_criteria_with_key/0"><code class="inline">search_criteria_with_key/0</code></a> for more info.
+</li>
+</ul>
+<h2 id="get_value/1-example" class="section-heading">
+  <a href="#get_value/1-example" class="hover-link"><i class="icon-link"></i></a>
+  Example
+</h2>
+
+<pre><code class="Elixir">case Nostrum.Cache.Guild.Guildserver.get_value(id: 69696969696969, key: :name) do
+  {:ok, sick_guild_name} -&gt; &quot;#{sick_guild_name} is sick&quot;
+  {:error, reason} -&gt; &quot;Whatchu&#39; searchin&#39; for fam?&quot;
+end</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="get_value!/1">
+  
+  <div class="detail-header">
+    <a href="#get_value!/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_value!(search_critera_with_key)</span>
+    
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/guild/guild_server.ex#L178" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>get_value!(<a href="#t:search_criteria_with_key/0">search_criteria_with_key</a>) :: no_return | term</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Retrieves a value from a guild in the cache.</p>
+<p>See <code class="inline">Nostrum.Cache.Guild.GuildServer.get_value!/2</code> for usage.</p>
+<p>Raises <a href="Nostrum.Error.CacheError.html"><code class="inline">Nostrum.Error.CacheError</code></a> if unable to find the guild or key.</p>
+
+  </section>
+</div>
+<div class="detail" id="get_value_from_all/1">
+  
+  <div class="detail-header">
+    <a href="#get_value_from_all/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_value_from_all(key)</span>
+    
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/guild/guild_server.ex#L101" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>get_value_from_all(key :: atom) :: <a href="https://hexdocs.pm/elixir/Enumerable.html#t:t/0">Enumerable.t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Retrieves a stream of values from all guilds.</p>
+<h2 id="get_value_from_all/1-parameter" class="section-heading">
+  <a href="#get_value_from_all/1-parameter" class="hover-link"><i class="icon-link"></i></a>
+  Parameter
+</h2>
+
+<ul>
+<li><code class="inline">key</code> - Value to get from all guilds.
+</li>
+</ul>
+<h2 id="get_value_from_all/1-example" class="section-heading">
+  <a href="#get_value_from_all/1-example" class="hover-link"><i class="icon-link"></i></a>
+  Example
+</h2>
+
+<pre><code class="Elixir">names =
+Nostrum.Cache.GuildServer.get_value_from_all(:name)
+|&gt; Enum.filter(&amp;is_weeb?)
+|&gt; D3L3T3_GU1LD5</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="transform/1">
+  
+  <div class="detail-header">
+    <a href="#transform/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">transform(list)</span>
+    
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/guild/guild_server.ex#L216" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>transform(<a href="#t:search_criteria_with_transform/0">search_criteria_with_transform</a>) :: {:ok, term}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Retrieves a transformed guild from the cache.</p>
+<p>Returns the result of applying a given fun to the guild specified by the search
+criteria.</p>
+<p>This transform does not modify the cache and is performed entirely server side.
+This means that if you somehow cause an error to be thrown, the receiving guild
+process will die. The benefit is not “copying” guild binaries between
+processes which can be very big.</p>
+<h2 id="transform/1-parameters" class="section-heading">
+  <a href="#transform/1-parameters" class="hover-link"><i class="icon-link"></i></a>
+  Parameters
+</h2>
+
+<ul>
+<li><code class="inline">search_criteria_with_transform</code> - The criteria used to search. See
+  <a href="#t:search_criteria_with_transform/0"><code class="inline">search_criteria_with_transform/0</code></a> for more info.
+</li>
+</ul>
+<h2 id="transform/1-example" class="section-heading">
+  <a href="#transform/1-example" class="hover-link"><i class="icon-link"></i></a>
+  Example
+</h2>
+
+<pre><code class="Elixir">tf = fn guild -&gt; Enum.any?(guild.members, &amp;(Map.get(&amp;1, :nick) == &quot;The year is 20XX&quot;)) end
+{:ok, plays_fox?} = Nostrum.Cache.Guild.GuildServer.transform(id: 123, transform: tf)</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="transform_all/1">
+  
+  <div class="detail-header">
+    <a href="#transform_all/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">transform_all(transform)</span>
+    
+      <a href="https://github.com/kraigie/nostrum/blob/master/lib/nostrum/cache/guild/guild_server.ex#L243" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>transform_all(<a href="#t:transform/0">transform</a>) :: <a href="https://hexdocs.pm/elixir/Enumerable.html#t:t/0">Enumerable.t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Retrieves a stream of transformed guild values from the cache.</p>
+<p>Returns a stream of as the result of calling <code class="inline">transform</code> on every guild in the
+cache.</p>
+<p>See <a href="#transform/1"><code class="inline">transform/1</code></a> for usage.</p>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.0),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-372682077e.js"></script>
+  </body>
+</html>
+
